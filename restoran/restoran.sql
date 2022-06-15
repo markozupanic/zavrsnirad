@@ -20,7 +20,7 @@ create table rezervacija(
     sifra int not null primary key auto_increment,
     brojljudi int not null,
     termindolaska datetime not null,
-    kontakt char(10) not null ,
+    telefon varchar(20) not null ,
     zaposlenik int 
 );
 
@@ -28,7 +28,7 @@ create table zaposlenik(
     sifra int not null primary key auto_increment,
     ime varchar(50) not null,
     prezime varchar(50) not null,
-    kontakt char(10) not null,
+    telefon varchar(20) not null,
     smjena int not null,
     znanje varchar(50)
 );
@@ -58,16 +58,16 @@ insert into proizvod(sifra,vrsta,naziv,kolicina,cijena) values
 (null,'hrana','biftek',1,139.99),(null,'piće','žesta',6,15);
 
 
-insert into rezervacija(sifra,brojljudi,termindolaska,kontakt) values
-values(null,8,2022-06-15-16-00,098562387),
-values(null,2,2022-06-13-19-30,098562327),
-values(null,4,2022-06-14-14-00,098562337),
-values(null,6,2022-06-07-18-00,098562347),
-values(null,13,2022-06-29-21-00,098562357);
+insert into rezervacija(sifra,brojljudi,termindolaska,telefon) values
+(null,8,'2022-06-15 16:00','0098562387'),
+(null,2,'2022-06-13 19:30','098562327'),
+(null,4,'2022-06-14 14-00','098562337'),
+(null,6,'2022-06-07 18-00','098562347'),
+(null,13,'2022-06-29 21-00','098562357');
 
-insert into zaposlenik(sifra,ime,prezime,kontakt,smjena) values
-(null,'marko','dujić',0950234789,1),(null,'ivan','lukić',0951234989,1),
-(null,'filip','bakrenić',0951334789,2),(null,'luka','horvat',0951234789,2);
+insert into zaposlenik(sifra,ime,prezime,telefon,smjena) values
+(null,'marko','dujić','0950234789',1),(null,'ivan','lukić','0951234989',1),
+(null,'filip','bakrenić','0951334789',2),(null,'luka','horvat','0951234789',2);
 
 insert into proizvodrezervacije(sifra,proizvod,rezervacija) values
 (null,3,1),(null,1,2),(null,7,3),(null,5,4),(null,9,5);
