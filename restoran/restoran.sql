@@ -59,7 +59,7 @@ insert into proizvod(sifra,vrsta,naziv,kolicina,cijena) values
 
 
 insert into rezervacija(sifra,brojljudi,termindolaska,telefon) values
-(null,8,'2022-06-15 16:00','0098562387'),
+(null,8,'2022-06-15 16:00','098562387'),
 (null,2,'2022-06-13 19:30','098562327'),
 (null,4,'2022-06-14 14-00','098562337'),
 (null,6,'2022-06-07 18-00','098562347'),
